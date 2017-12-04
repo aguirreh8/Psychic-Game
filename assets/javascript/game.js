@@ -13,6 +13,7 @@ function pickLetter() {
 function compareGuess() {
 	if (guess === compPick) {
 		wins++;
+		document.querySelector('#wins').innerHTML = "Wins: " + wins;
 		gameReset();
 	} else {
 		tries--;
@@ -29,11 +30,14 @@ function gameReset() {
 	}
 	pickLetter();
 	tries = 9;
+	document.querySelector('#tries').innerHTML = "Tries left: " + tries;
+	document.querySelector('#guesses').innerHTML = "Guesses so far: " + guessList;
 }
 
 function loseGame() {
 	if (tries === 0) {
 		losses++;
+		document.querySelector('#losses').innerHTML = "Losses: " + losses;
 		gameReset();
 	}
 }
