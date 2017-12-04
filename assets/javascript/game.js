@@ -17,7 +17,9 @@ function compareGuess() {
 	} else {
 		tries--;
 		guessList.push(guess);
-		looseGame();
+		document.querySelector('#tries').innerHTML = "Tries left: " + tries;
+		document.querySelector('#guesses').innerHTML = "Guesses so far: " + guessList;
+		loseGame();
 	}
 }
 
@@ -29,7 +31,7 @@ function gameReset() {
 	tries = 9;
 }
 
-function looseGame() {
+function loseGame() {
 	if (tries === 0) {
 		losses++;
 		gameReset();
@@ -40,8 +42,14 @@ pickLetter()
 window.addEventListener('keyup', function(event) {
 	if (event.keyCode >= 65 && event.keyCode <= 90) {
 		guess = event.key.toLowerCase();
-		console.log("I pressed: " + guess + " Computer picked: " compPick);
-		
+		console.log("I pressed: " + guess + " Computer picked: " + compPick);
+		compareGuess();
+		console.log("Current Tally");
+		console.log("Wins: " + wins);
+		console.log("Losses: " + losses);
+		console.log("Tries: " + tries);
+		console.log("Guesses Made: " + guessList);
+		console.log("--------------------");		
 	}
 
 })
