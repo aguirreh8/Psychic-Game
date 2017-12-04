@@ -10,22 +10,38 @@ function pickLetter() {
 	compPick = wordBank[Math.floor(Math.random() * wordBank.length)];
 }
 
-function resetGuessList() {
-	if (guessList.length == 9) {
-		while (guessList.length > 0) {
-			guessList.pop();
-		}
+function compareGuess() {
+	if (guess === compPick) {
+		wins++;
+		gameReset();
+	} else {
+		tries--;
+		guessList.push(guess);
+		looseGame();
 	}
 }
 
-pickLetter();
+function gameReset() {	
+	while (guessList.length > 0) {
+			guessList.pop();
+	}
+	pickLetter();
+	tries = 9;
+}
 
+function looseGame() {
+	if (tries === 0) {
+		losses++;
+		gameReset();
+	}
+}
+
+pickLetter()
 window.addEventListener('keyup', function(event) {
 	if (event.keyCode >= 65 && event.keyCode <= 90) {
 		guess = event.key.toLowerCase();
-		alert("You have pressed a letter: " + guess);
-		guessList.push(guess);
-		console.log(guessList);
+		console.log("I pressed: " + guess + " Computer picked: " compPick);
+		
 	}
 
 })
