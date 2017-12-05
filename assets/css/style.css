@@ -1,0 +1,84 @@
+* {
+	position: relative;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0 auto;
+}
+
+header {
+	padding: 20px;
+	border: solid;
+	border-style: double;
+}
+
+h1 {
+	font-family: "Arial", "sans-serif";
+	font-size: 35px;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+}
+
+.message {
+	font-family: "Arial", "sans-serif";
+	font-size: 20px;
+	text-align: center;
+	padding: 20px;
+}
+
+.container {
+	/*width: 1120px;*/
+	width: 90%;
+	max-height: 100%;
+	margin-bottom: 20px;
+}
+
+.container:after {
+	content: "";
+	display: block;
+}
+
+.leftSection {
+	width: 400px;
+	background-color: #C0C0C0FF;
+	margin-left: 10%;
+	padding: 40px;
+}
+
+.rightSection {
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #C0C0C0FF;
+    padding-top: 50px;
+    text-align: center;
+    font-family: 'Arial', 'sans-serif';
+    font-size: 30px;
+}
+
+.tally {
+	width: 80%;
+	text-align: center;
+	font-size: 35px;
+	font-family: 'Arial', 'sans-serif';
+	padding: 20px;
+	margin: 0 auto;
+	background-color: #A0A0A0FF;
+	margin-bottom: 20px;
+}
+
+#guesses {
+	color: yellow;
+}
+
+.footer {
+	height: 120px;
+	color: white;
+	background-color: #404040FF;
+	padding: 50px;
+	text-align: center;
+}

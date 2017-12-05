@@ -19,7 +19,7 @@ function compareGuess() {
 		tries--;
 		guessList.push(guess);
 		document.querySelector('#tries').innerHTML = "Tries left: " + tries;
-		document.querySelector('#guesses').innerHTML = "Guesses so far: " + guessList;
+		document.querySelector('#guesses').innerHTML = guessList + ' ';
 		loseGame();
 	}
 }
@@ -31,7 +31,7 @@ function gameReset() {
 	pickLetter();
 	tries = 9;
 	document.querySelector('#tries').innerHTML = "Tries left: " + tries;
-	document.querySelector('#guesses').innerHTML = "Guesses so far: " + guessList;
+	document.querySelector('#guesses').innerHTML = ' ';
 }
 
 function loseGame() {

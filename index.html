@@ -8,16 +8,21 @@
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
-	<h1>Psychic Game!</h1>
-	Guess the letter that I'm thinking of.
-	<br />
-	<br />
-	<div id='wins'>Wins: 0</div>
-	<br />
-	<div id="losses">Losses: 0</div>
-	<br />
-	<div id="tries">Tries left: 0</div>
-	<br />
-	<div id="guesses">Guesses so far:</div>
+	<header><h1>Psychic Game!</h1></header>
+	<div class="message">Guess the letter that I'm thinking of.</div>
+	<div class="container">
+		<section class="leftSection">
+			<div class="tally" id='wins'>Wins: 0</div>
+			<div class="tally" id="losses">Losses: 0</div>
+			<div class="tally" id="tries">Tries left: 0</div>
+		</section>
+		<section class="rightSection">
+			Guesses so far:
+			<div id="guesses"></div>
+		</section>
+	</div>
+	<footer class="footer">
+		Copywrite @ 2017 Henry Aguirre
+	</footer>
 </body>
 </html>
