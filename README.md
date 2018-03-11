@@ -1,23 +1,15 @@
 # Psychic-Game
 Press key to guess the randomly selected answer.
 
-Game starts 
+## Game Flow 
 Computer randomly a pickes letter.
+The user can then use the keyboard to guess any letter between a-z. There are only 9 tries before the game resets, adds one to to the losses and picks another letter to guess
 
-When key is pressed, check if the letter matches the picked letter.
-	If (guess matches letter) {
-		add 1 to win tally
-		reset guess letter list
-		have computer pick another letter
-	}
-	else if (guess does not match letter) {
-		subtract 1 from number of tries
-		add guessed letter to a list
-		display/update the guessed letter list to player
-}
+![preview](assets/images/preview.jpg)
 
-	If (number of tries reaches 0) {
-		add 1 to losses tally
-		reset guess letter list
-		have computer pick another letter
-	}
+
+## How To Play
+Click [here](https://aguirreh8.github.io/Psychic-Game/) to lauch the app, or clone the repo into your desktop and run **index.html**.
+
+## Author
+Henry Aguirre
